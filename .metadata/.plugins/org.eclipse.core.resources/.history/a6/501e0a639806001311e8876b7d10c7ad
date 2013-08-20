@@ -1,0 +1,49 @@
+package com.usb.aplicacion1;
+
+import android.os.Bundle;
+
+// Activity - Ventanas
+// Views - Controles
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        LinearLayout layout;
+        
+        layout = new LinearLayout(this);
+        
+        TextView tv = new TextView(this);
+        TextView tv1 = new TextView(this);
+        TextView tv2 = new TextView(this);
+        
+        tv.setLeft(20);
+        
+        tv.setText("textview");
+        tv1.setText("textview");
+        tv2.setText("textview");
+        
+        layout.addView(tv);
+        layout.addView(tv1);
+        layout.addView(tv2);
+
+        this.setContentView(layout);
+        
+        
+        
+        
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.activity_main, menu);
+        return true;
+    }
+    
+}
